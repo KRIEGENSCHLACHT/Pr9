@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">KriegMedia</string>
+    <string name="mainPage_text">We study at BTPIT!</string>
+    <string name="remove">Удалить</string>
+    <string name="edit">Редактировать</string>
+    <string name="postText">Текст поста</string>
+    <string name="postLike">Нравится</string>
+    <string name="error_empty_content">Не может быть пустым</string>
+    <string name="share_post">Поделиться постом</string>
+    <string name="description_post_save">Сохранить\n</string>
+    <string name="cancel">Отменить\n</string>
+    <string name="play">Пуск\n</string>
+    <string name="like">Нравится\n</string>
+</resources>
