@@ -51,7 +51,6 @@
         android:layout_marginBottom="5dp"
         android:ellipsize="end"
         android:singleLine="true"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/published"
         app:layout_constraintStart_toEndOf="@id/postAvatar"
         app:layout_constraintTop_toTopOf="@id/postAvatar"

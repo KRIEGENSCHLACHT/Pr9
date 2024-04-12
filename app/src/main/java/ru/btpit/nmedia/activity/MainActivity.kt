@@ -72,7 +72,8 @@ class MainActivity : AppCompatActivity() {
 //            }
         }
         binding.fab.setOnClickListener {
-            newPostLauncher.launch(null)
+            val text = ""
+            newPostLauncher.launch(text)
         }
 
     }

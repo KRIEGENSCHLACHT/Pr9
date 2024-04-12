@@ -1,10 +1,14 @@
 package ru.btpit.nmedia.viewmodel
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import ru.btpit.nmedia.dto.Post
 import ru.btpit.nmedia.repository.PostRepository
 import ru.btpit.nmedia.repository.PostRepositoryInMemoryImpl
-import ru.btpit.nmedia.dto.Post
+import ru.btpit.nmedia.repository.PostRepositorySharedPrefsImpl
+
 private val empty = Post(
     id = 0,
     content = "",
@@ -15,8 +19,8 @@ private val empty = Post(
     likes = 0,
     share = 0
 )
-class PostViewModel : ViewModel() {
-    private val repository: PostRepository = PostRepositoryInMemoryImpl()
+class PostViewModel(application: Application) : AndroidViewModel(application) {
+    private val repository: PostRepository = PostRepositorySharedPrefsImpl(application)
     val data = repository.getAll()
     val edited = MutableLiveData(empty)
     fun save() {
